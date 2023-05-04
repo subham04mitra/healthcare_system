@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="300" height="100">
+        <tr>
+           <td>Name</td> <td id="1">
+                
+            </td></tr>
+            <tr>
+            <td>Email</td> <td id="2"></td>
+        </tr>
+    </table>
+    <button onclick="go()">go</button>
+</body>
+<script>
+    let z=localStorage.getItem('user');
+    function y(z){
+        // z=z.toString();
+        let z1=JSON.parse(z);
+        // document.write(z1)
+        
+        document.getElementById("1").innerText=z1.Data[0].Name;
+        document.getElementById("2").innerText=z1.Data[0].Email;
+        console.log(z1);
+        localStorage.setItem('x',z1)
+        localStorage.removeItem('user')
+   
+}
+    y(z);
+    
+    // console.log();
+   
+    async function go(){
+        let g=JSON.parse(z);
+        let token=g.Token;
+        await fetch("http://127.0.0.1:8111/med/user/home", {
+      headers: {
+        "Content-type": "application/json",
+        'Connection': "keep-alive",
+        "Accept-Encoding": "gzip, deflate, br",
+        'Accept': "*/*",
+        "User-Agent": "PostmanRuntime/7.31.1",
+        "token":token
+      },
+      method: "POST",
+    }) .then((response) => response.json())
+      .then((json) => {console.log(json);
+    })}
+</script>
+</html>

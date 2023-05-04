@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>patient registration</title>
+     <link rel="stylesheet" href="patient.css">
+  </head>
+  <body>
+    <div class="main">
+      <form onsubmit="event.preventDefault();">
+        <h3>
+          <u><b>Patient Registration</b></u>
+        </h3>
+
+        <label for="username"><b>Name :</b></label>
+        <input type="text" placeholder="Name" id="name" />
+
+        <label for="mobile"><b>Mobile No. :</b></label>
+        <input type="text" placeholder="Mobile no." id="mobile" />
+
+        <label for="username"><b>Email :</b></label>
+        <input type="text" placeholder="Email" id="email" />
+
+        <label for="password"><b>Password :</b></label>
+        <input type="password" placeholder="Password" id="password" />
+
+        <div class="social">
+          <button onclick="patreg()">Submit</button>
+          <button>Reset</button>
+        </div>
+        <div>
+                    <p><b>Already have an account?</b>
+                    <a href="login.html" style="color: blue;">Login</a>
+                    </p>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="patientreg.js"></script>
+</html>

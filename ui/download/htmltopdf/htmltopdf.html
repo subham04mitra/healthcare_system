@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML TO PDF</title>
+	<script src="js/jquery.min.js"></script>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="css/style.css" rel="stylesheet" >
+</head>
+<body>
+
+
+
+<div id="invoice">
+    <header >
+      <h1>E-HEALTH</h1>
+      <address >
+        <p> E-Prescription </p>
+        <p>ehealthinfo@gmail.com </p>
+        <p> ehealth.com </p>
+        <p> Business Number: 0-808-234-2380 </p>
+      </address>
+      <span id="docname"></span>
+    </header>
+    <article>
+    
+      <address class="norm">
+       Name: <h4 id="patname"></h4>
+       Email: <p id="patemail"><br>
+        
+      </address>
+      
+      <table class="meta">
+        <tr>
+          <th><span >Prescription Id</span></th>
+          <td><span >101138</span></td>
+        </tr>
+        <tr>
+          <th><span >Date</span></th>
+          <td><span id="date"></span></td>
+        </tr>
+        <tr>
+          <th><span >Mode</span></th>
+          <td><span id="prefix" ></span><span>Video Call</span></td>
+        </tr>
+      </table>
+      <table class="inventory">
+        <thead>
+          <tr>
+            <th><span >Symtoms</span></th>
+            
+            <th><span >Disease Name</span></th>
+            <th><span >Medicines</span></th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span id="symtoms"></span></td>
+          
+            <td><span id="disease"></span></td>
+            <td><span id="medicine" ></span></td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <table class="sign">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+
+      
+    </article>
+    <aside>
+      <h1><span >Doctor Advice</span></h1>
+      <div >
+        <p id="advise"></p>
+      </div>
+    </aside>
+
+</div>
+
+
+
+
+  <a  href="javascript:void(0)" class="btn-download">Download PDF  </a>
+
+
+
+<script src="js/jspdf.debug.js"></script>
+<script src="js/html2canvas.min.js"></script>
+<script src="js/html2pdf.min.js"></script>
+
+
+<script>
+let data=JSON.parse(localStorage.getItem('download'));
+console.log("download",data);
+document.getElementById('patname').innerText=data.patname;
+document.getElementById('docname').innerText=data.docname;
+document.getElementById('patemail').innerText=data.patemail;
+document.getElementById('date').innerText=data.date
+document.getElementById('symtoms').innerText=data.symtoms
+document.getElementById('advise').innerText=data.advise
+document.getElementById('medicine').innerText=data.medicine
+document.getElementById('disease').innerText=data.disease
+
+    const options = {
+      margin: 0.5,
+      filename: 'report.pdf',
+      image: { 
+        type: 'jpeg', 
+        quality: 500
+      },
+      html2canvas: { 
+        scale: 1 
+      },
+      jsPDF: { 
+        unit: 'in', 
+        format: 'letter', 
+        orientation: 'portrait' 
+      }
+    }
+    
+    $('.btn-download').click(function(e){
+      e.preventDefault();
+      const element = document.getElementById('invoice');
+      html2pdf().from(element).set(options).save();
+    });
+
+
+    function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+body{
+  background-image: linear-gradient(to right, #6b8cf1, #eee8e3);
+  font-family: sans-serif;
+  /* overflow: hidden; */
+
+}
+/* offcanvas navbar */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav h2{
+  text-align: center;
+  color: #dfd6d6;
+  font-weight: 600;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #cecccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ffffff;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.section-header {
+  text-align: center;
+  margin: 0px auto;
+  padding: 10px 0;
+  font: 30 25px 'Oswald', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+}
+
+button {
+  margin-top: 10px;
+  width: 8%;
+  background-color: #c0b2b2;
+  color: #080710;
+  padding: 10px 0px;
+  font-size: 8px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #b0e2bf;
+}
+
+.btn-float-right {
+  float: right;
+  margin-top: 10px;
+  width: 8%;
+  background-color: #10f710;
+  color: #080710;
+  padding: 10px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+.main {
+  height: 80%;
+  width: 100%;
+  
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+table {
+  /* position: relative; */
+  /* display: block; */
+  right: 105%;
+  color: #000000;
+  top: 50%;
+  margin-top: 2cm;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 50%;
+  height: 50%;
+  border: 1px solid #000000;
+  font-weight: 250;
+}
+
+th, td {
+  text-align: left;
+  padding: 20px;
+}
+th{
+  font-weight: 650;
+  font-size: larger;
+  background-color: white;
+}
+/* tr:nth-child(even){background-color: #ffffff} */
+
+.view-icon {
+  font-size: 25px;
+  color: #080808;
+  cursor: pointer;
+  margin: 27%;
+}
+
+.view-icon:hover {
+  color: #0404f5;
+}
+.form-popup {
+  display: none;
+  position:absolute;
+  width: 500px;
+  margin: 5%;
+  bottom: 0;
+  right: 23%;
+  border: 3px solid #f1f1f1;
+  
+}
+
+
+.form-container {
+  
+  width: 495px;
+  padding: 5px 20px;
+  background-color: rgb(252, 252, 252);
+  
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 5px;
+  margin: 15px 0 15px 0;
+  border: none;
+  background: #f1f1f1;
+  
+}
+
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #daddec;
+  outline: none;
+  
+}
+
+.form-container .btn {
+  
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 0px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-left:55px;
+  opacity: 0.8;
+  
+
+}
+
+
+.form-container .cancel {
+  background-color: red;
+  margin-left: 35%;
+}
+
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 5;
+   color: #333;
+
+}

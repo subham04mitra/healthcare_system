@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+body{
+  margin: 0;
+  padding: 0;
+ font-family: 'Roboto', sans-serif !important;
+ background: linear-gradient(-45deg,#030000,#6b6a69);
+ overflow: auto;
+}
+/* header */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1%;
+  z-index: 10;
+}
+
+nav ul {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0%;
+  
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+	/* margin: 0 10px; */
+ 
+    float: left;
+  
+}
+
+nav a {
+	/* color: white;
+	text-decoration: none; */
+  display: block;
+    color: white;
+    text-align: center;
+    padding: 4px 25px;
+    text-decoration: none;
+}
+/* welcome page design */
+nav li a:hover:not(.active) {
+  background-color: #acf767;
+  color: black;
+}
+.active {
+  padding: 5px 15px;
+  background-color: #04AA6D;
+}  
+/* head1 */
+.head1 {
+  background-color: rgb(70, 69, 64);
+  color: white;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.head ul {
+list-style-type: none;
+width: 10px;
+margin: 0;
+padding: 0px;
+background-color: #333;
+}
+
+
+.head1 li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+/* logout button */
+.btn2 {
+  float: right;
+  margin-top: 10px;
+  width: 8%;
+  background-color: #24bb10;
+  color: #080710;
+  padding: 2px 0px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 5px;
+}
+.btn2:hover{
+  background-color: #96fd35;
+  color: black;
+}
+/* pricing model */
+.model{
+	margin-top: 8%;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-weight: 900;
+	z-index: 0;
+}
+section{
+  width: 100%;
+  height: 8vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 1px 0;
+}
+.card{
+  position: relative;
+  width: 300px;
+  height: 580px;
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+  border-radius: 10px;
+  margin: 8%;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+-webkit-transition: .5s;
+transition: .5s;
+}
+.card:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.col-sm-4:nth-child(1) .card ,
+.col-sm-4:nth-child(1) .card .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#1679ca);
+
+}
+.col-sm-4:nth-child(2) .card,
+.col-sm-4:nth-child(2) .card .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+
+}
+.col-sm-4:nth-child(3) .card,
+.col-sm-4:nth-child(3) .card .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+
+}
+
+.col-sm-4:nth-child(4) .card,
+.col-sm-4:nth-child(4) .card .title .fa{
+  background: linear-gradient(-45deg,#2495ff,#41403b);
+
+}
+.col-sm-4:nth-child(5) .card,
+.col-sm-4:nth-child(5) .card .title .fa{
+  background: linear-gradient(-45deg,#bb4848,#2accd8);
+
+}
+.card::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: rgba(255, 255, 255, .1);
+z-index: 1;
+/* -webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5); */
+}
+.title .fa{
+  color:#fff;
+  font-size: 30px;
+  width: 80px;
+  height: 100px;
+  border-radius:  60%;
+  text-align: center;
+  line-height: 100px;
+  -webkit-box-shadow: 0 5px 5px rgba(0,0,0,.1) ;
+          box-shadow: 0 5px 5px rgba(0,0,0,.1) ;
+
+}
+.title h2 {
+  position: relative;
+  margin: 20px  0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+ z-index: 1;
+}
+.price,.option{
+  position: relative;
+  z-index: 1;
+}
+.price h4 {
+margin: 0;
+padding: 20px 0 ;
+color: #020202;
+font-weight: 500;
+font-size: 30px;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+
+}
+.option ul li {
+margin: 0 0 10px;
+padding: 0;
+list-style: none;
+color: #fff;
+font-size: 16px;
+}
+.card a {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  color : black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 ;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+
+}
+.card a:hover{
+    text-decoration: none;
+	
+}
+/* footer */
+.footer {
+	position:relative;
+	  left: 0;
+	  width: 100%;
+	background-color: #000000;
+	color: white;
+	text-align: center;
+	padding: 0%;
+	z-index: 10;
+	overflow: hidden;
+  }

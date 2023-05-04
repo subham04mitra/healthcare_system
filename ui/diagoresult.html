@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="diagoresult.css">
+</head>
+
+  <body>
+    <!-- <div class="container">  
+    <div class="sidenav">
+      <h2>Name</h2>
+      <button class="button3" onclick="window.location.href = 'profile.html';">Profile</button>  
+      <br>
+      <button class="button3" onclick="window.location.href = 'history.html';">History</button>
+      <br>
+      <button class="button3" onclick="window.location.href = 'diago.html';">Self Diagonise</button>
+    </div>
+    <div class="topbox">       
+        <div><button class="logout" onclick="logout()">Logout</button></div>
+      </div> -->
+
+      <div id="mySidenav" class="sidenav">
+        <h2 style="color: white;">User Name</h2>
+        <br>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+        <a href="patientuse copy.html">Profile</a>
+        <a href="appointdoc.html" onclick="appoint()">Book Appointment</a>
+        <a href="#">Order Medicine</a>
+        <a href="diago.html" onclick="diago()">AI Check</a>
+        <a href="history.html" onclick="medical()">Medical History</a>
+        <a href="showappoint.html" onclick="appoint()">Appopintments</a>
+      </div>
+      
+      <div id="main">
+        <h2 class="section-header">
+        <span style="font-size:30px;cursor:pointer;float: left; color: rgb(255, 255, 255);" onclick="openNav()">&#9776; open</span>
+        <b>For Patient</b>
+            <button type="but" class="btn-float-right">Log out</button>
+
+
+     <center>     
+         <table class="table">
+          <tr>
+            <td>Disease :</td>
+            <td><div disabled id="disease" ></div></td>
+            
+          </tr>
+          <tr>
+            <td>Symtoms :</td>
+            <td><div disabled id="symtoms"></div></td>
+          </tr>
+          <tr>
+            <td>Details :</td>
+            <td> <div disabled id="details" rows="4" cols="30"></div></td>
+          </tr>
+          <tr>
+            <td>Advice :</td>
+            <td><div disabled id="advice" rows="5" cols="50"></div></td>
+          </tr>
+          <tr>
+            <td>Medicine :</td>
+            <td><div disabled id="medicine"></div></td>
+          </tr>
+         </table>
+     </center>
+      </div> 
+      <div id="x"></div>
+    
+  </body>
+  <script src="diagoresult.js"></script>
+</html>
+

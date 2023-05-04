@@ -1,0 +1,134 @@
+{
+    "user":{
+        "Name":{
+            "type":"String"
+        },
+        "Mobile":{
+            "type":"Number"
+        },
+        "Email":{
+            "type":"String",
+            "unique":true
+        },
+        "Password":{
+            "type":"String"
+        }
+    },
+    "jwt":{
+        "Token":{
+            "type":"String"
+        },
+        "Name":{
+            "type":"String"
+        },
+        "Built_Time":{
+            "type":"Date"
+        },
+        "Logout":{
+            "type":"Boolean"
+        }
+    },
+    "doctor":{
+        "Name":{
+            "type":"String"
+        },
+        "RegistrationId":{
+            "type":"String"
+        },
+        "Mobile":{
+            "type":"Number"
+        },
+        "Address":{
+            "type":"String"
+        },
+        "Avaibility":{
+            "type":"Boolean"
+        },
+        "Email":{
+            "type":"String"
+        },
+        "Password":{
+            "type":"String"
+        },
+        "Specialization":{
+            "type":"String"
+        }
+
+    },
+    "medical":{
+        
+            "date": {
+                "type":"Date"
+            },
+            "symtoms": {
+                "type":"String"
+            },
+            "disease": {
+                "type":"String"
+            },
+            "medicine":{
+                "type":"String"
+            },
+            "advise":{
+                "type":"String"
+            },
+            "details":{
+                "type":"String"
+            },
+            
+              "docname":{
+                "type":"String"
+            },
+              "docemail":{
+                "type":"String"
+            }
+            ,
+            
+              "patname": {
+                "type":"String"
+            },
+              "patemail": {
+                "type":"String"
+            }
+            
+          
+    
+},
+"diesase":{
+    
+       
+        "disease": "String"
+        ,
+        "details":"String"
+        ,
+        "advice": "String"
+        ,
+        "medicine":"String"
+        
+      
+},
+"appointment":{
+    "pat_name":"String",
+    "pat_email":"String",
+    "doc_name":"String",
+    "doc_email":"String",
+    "date":"Date",
+    "time":"String",
+    "mode":"String"
+},
+"medicine":{
+    "type":"String",
+    "title":"String",
+    "price":"String",
+    "brand":"String",
+    "thumbnail":"String",
+    "description":"String"
+},
+"message":{
+    "name":"String",
+    "mobile":"String",
+    "message":"String",
+    "date":"String"
+
+}
+}

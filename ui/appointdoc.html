@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="history.css">
+</head>
+
+  <body>
+    <!-- <div class="container">  
+    <div class="sidenav">
+      <h2>Name</h2>
+      <button class="button3" onclick="window.location.href = 'profile.html';">Profile</button> 
+      <br>
+      <button class="button3" onclick="window.location.href = 'history.html';">History</button>
+      <br>
+      <button class="button3" onclick="window.location.href = 'diago.html';">Self Diagonise</button>
+      <button class="button3" onclick="window.location.href = 'appointdoc.html';"> Book Appointment</button>
+    </div>
+    <div class="topbox">       
+        <div><button class="logout" onclick="logout()">Logout</button></div>
+      </div> -->
+      <!-- ofcanvas nav -->
+    <div id="mySidenav" class="sidenav">
+      <h2>User Name</h2>
+      <br>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="patientuse copy.html">Profile</a>
+        <a href="appointdoc.html" onclick="appoint()">Book Appointment</a>
+        <a href="#">Order Medicine</a>
+        <a href="diago.html" onclick="diago()">AI Check</a>
+        <a href="history.html" onclick="medical()">Medical History</a>
+        <a href="showappoint.html" >Appopintments</a>
+    </div>
+    
+    <div id="main">
+      <h2 class="section-header">
+      <span style="font-size:30px;cursor:pointer;float: left; color: rgb(0, 0, 0);" onclick="openNav()">&#9776; open</span>
+      <b style="color: black;">For Patient</b>
+          <button type="button" class="btn-float-right" onclick="logout()">Log out</button>
+      <div>
+        <center>
+        <div id="table">
+          <!-- <thead>
+            <th><u>Date</u></th>
+            <th><u>Symtoms</u></th>
+            <th><u>Diesease</u></th>
+            <th><u>Doctor Name</u></th>   
+          </thead> -->
+         
+        </div></center>
+      </div>
+      </div> 
+      <div class="popup" id="popup" style="margin-left: 10cm; margin-top: 5cm; margin-right: 5cm;">
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container" onsubmit="event.preventDefault();">
+            <h1><u>Book Your Appointment</u></h1>
+            <br>
+            <label for="date"><b>Date :</b></label>
+            <input type="date" placeholder="Date" id="date" required />
+            <br><br>
+            <label for="time"><b>Time :</b></label>
+            <input type="time" placeholder="Time" id="time" required/>
+            <br><br>
+            <label for="mode"><b>Mode :</b></label>
+            <input type="text" placeholder="Select Mode(chat/videocall)" id="mode" required>
+        
+            <button type="submit" class="btn" onclick="confirmappointment()">Submit</button>
+            <!-- <button type="reset" class="btn">Reset</button> -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+  </body>
+  <script src="appointdoc.js"></script>
+</html>
+

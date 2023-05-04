@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forpatientuse</title>
+    <link rel="stylesheet" href="profile1.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    
+</head>
+<body>
+ 
+    <!-- ofcanvas nav -->
+    <div id="mySidenav" class="sidenav">
+        <h2>User Name</h2>
+        <br>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="profile1.html">Profile</a>
+        <a href="showpathis.html">Patients List</a>
+        <a href="showappointtodoc.html">Due Appoinment</a>
+        <a href="searchpat.html">Search Patients</a>
+        
+        
+      </div>
+      
+      <div id="main">
+        <h2 class="section-header">
+        <span style="font-size:30px;cursor:pointer;float: left; color: rgb(0, 0, 0);" onclick="openNav()">&#9776; open</span>
+        <b style="color: black;">For Doctor</b>
+            <button type="button" class="btn-float-right" onclick="logout()">Log out</button>
+      
+        
+        
+    </h2>  
+    </div>
+    <div style="margin-left: 8cm; margin-top: 2cm; margin-right: 5cm;margin-bottom:20cm ;">
+        <table class="table" border="1" cellspacing="0" width="100" height="150" id="table">
+        
+        <tbody>
+          <tr>
+            <td class="td1">NAME</td>
+            <td id="name" class="td2">Name</td>
+          </tr>
+          <tr>
+            <td class="td1">REGISTRATION ID</td>
+            <td id="id" class="td2">reg id</td>
+           </tr>
+          <tr>
+           <td class="td1">MOBILE</td>
+           <td id="mobile" class="td2">Mobile</td>
+          </tr>
+          <tr>
+            <td class="td1">EMAIL</td>
+            <td id="email" class="td2">Email</td>
+          </tr>
+          <tr>
+            <td class="td1">ADDRESS</td>
+            <td id="address" class="td2">address</td>
+          </tr>
+          <tr>
+            <td class="td1">AVAIBILITY</td>
+            <td id="avl" class="td2">avaibility</td>
+          </tr>
+          <tr>
+            <td class="td1">PASSWORD</td>
+            <td id="userpassword" class="td2">Password</td>
+          </tr>
+         <tr>
+          <td><input type="radio"  name="avl" value=true />  
+            <label for="doctor"> Available</label>  
+            <input type="radio"  name="avl" value=false />  
+            <label for="patient">Not Available</label>  </td>
+          <td> <button type="button1" class="btn1" onclick="updateavl()">Update</button> </td>
+         </tr>
+        </tbody>
+      </table>
+     
+       
+</div>
+    <!-- <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";
+        }
+        </script> -->
+  
+      <!-- footer -->
+      <div class="footer">
+          <p>
+              &copy; 2023,   MOON KNIGHT 
+              
+              <a href="#" class="fa fa-facebook" style="
+              color:#3B5998;;padding: 10px;
+        font-size: 17px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;"></a>
+              <a href="#" class="fa fa-google" style="
+              color: #ebe8e8;padding: 10px;
+        font-size: 17px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;"></a>
+              <a href="#" class="fa fa-instagram" style="
+              color:  darkmagenta;padding: 10px;
+              font-size: 17px;
+              width: 40px;
+              text-align: center;
+              text-decoration: none;
+              margin: 5px 2px;"></a>
+          
+          </p>
+        </div>
+  </body>
+  <script src="profile1.js"></script>
+  </html>

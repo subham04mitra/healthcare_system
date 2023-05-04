@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="history.css">
+
+</head>
+
+  <body>
+    <!-- <div class="container">  
+    <div class="sidenav">
+      <h2>Name</h2>
+      <button class="button3" onclick="window.location.href = 'profile.html';">Profile</button> 
+      <br>
+      <button class="button3" onclick="window.location.href = 'history.html';">History</button> 
+      <br>
+      <button class="button3" onclick="window.location.href = 'diago.html';">Self Diagonise</button>
+    </div>
+    <div class="topbox">       
+        <div><button class="logout" onclick="logout()">Logout</button></div>
+      </div> -->
+      <!-- ofcanvas nav -->
+    <div id="mySidenav" class="sidenav">
+      <h2>User Name</h2>
+      <br>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="patientuse copy.html">Profile</a>
+     
+      <a href="appointdoc.html" onclick="appoint()">Book Appointment</a>
+      <a href="listing.html">Order Medicine</a>
+      <a href="diago.html" onclick="diago()">AI Check</a>
+      <a href="history.html" onclick="medical()">Medical History</a>
+      <a href="showappoint.html" onclick="appoint()">Appopintments</a>
+    </div>
+    
+    <div id="main">
+      <h2 class="section-header">
+      <span style="font-size:30px;cursor:pointer;float: left; color: rgb(7, 7, 7);" onclick="openNav()">&#9776; open</span>
+      <b style="color: black;">For Patient</b>
+          <button type="button" class="btn-float-right" onclick="logout()">Log out</button>
+      <div>
+        <center>
+        <div id="table">
+          <!-- <thead>
+            <th><u>Date</u></th>
+            <th><u>Symtoms</u></th>
+            <th><u>Diesease</u></th>
+            <th><u>Doctor Name</u></th>   
+          </thead> -->
+         
+        </div></center>
+      </div>
+      </div> 
+      <div class="popup" id="popup" style="margin-left: 10cm; margin-top: 5cm; margin-right: 5cm; background-color: black; color: aqua;">
+        <form onsubmit="event.preventDefault();" class="form-popup" id="myForm" style="background-color: black;">
+          <center><h3>E-Prescription</h3></center>
+          <hr>
+          Patient Name:<textarea type="text" id="name" ></textarea> <br>
+          Doctor Name: <textarea type="text" id="doctor"></textarea>
+<br>
+<hr>
+        Symtom:<textarea id="symtoms"></textarea><br>
+      Disease:<textarea id="disease"></textarea><br>
+      Advice: <textarea id="advice"></textarea><br>
+      Medicines:<textarea id="medicine"></textarea><br><br>
+      <h2>Get Well Soon</h2>
+      <br><br>
+      <button onclick="GeneratePdf()">Download</button> <button onclick="closeForm()">close</button>
+        </form></div>
+     
+    </body>
+  <script src="history.js"></script>
+</html>
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form onsubmit="event.preventDefault();">
+        <h3><u><b>Login Page</b></u></h3>
+
+        <label for="username">Email / User Id :</label>
+        <input type="text" placeholder="Email or Phone" id="username" />
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" />
+
+        <div class="typeSelect">
+          <span style="margin-top: 28px;" >Type:</span>
+            <input type="radio" id="doctor" name="type" value="doctor" />  
+          <label for="doctor"><span></span> Doctor</label>  
+          <input type="radio" id="patient" name="type" value="patient" />  
+          <label for="patient"><span></span>Patient</label>  
+        </div>
+
+        <div class="social">
+          <button onclick="login()">Submit</button>
+          <button>Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="login.js"></script>
+</html>
